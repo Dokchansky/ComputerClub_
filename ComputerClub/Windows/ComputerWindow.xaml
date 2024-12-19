@@ -1,0 +1,19 @@
+﻿<Window x:Class="ComputerClub.Windows.ComputerWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ComputerClub.Windows"
+        mc:Ignorable="d"
+        Title="ComputerWindow" Height="450" Width="800">
+    <Grid>
+        <DataGrid x:Name="CompGrid" AutoGenerateColumns="False" CanUserResizeColumns="False" IsReadOnly="True" Margin="10,30,66,134">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Модель" CanUserReorder="False" Binding="{Binding Model}"/>
+                <DataGridTextColumn Header="Процессор" CanUserReorder="False" Binding="{Binding Processor}"/>
+                <DataGridTextColumn Header="Оперативная память" CanUserReorder="False" Binding="{Binding RAM}"/>
+                <DataGridTextColumn Header="Хранилище" CanUserReorder="False" Binding="{Binding Storage}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>

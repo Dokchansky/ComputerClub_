@@ -1,0 +1,36 @@
+﻿<Window x:Class="ComputerClub.Windows.UserWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ComputerClub.Windows"
+        mc:Ignorable="d"
+        Title="UserWindow" Height="450" Width="800">
+    <Grid>
+        <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" Height="170" Width="154" Margin="646,0,0,0" >
+            <Image Source="image.jpeg" Height="200"/>
+        </StackPanel>
+        <StackPanel Margin="28,170,0,175" HorizontalAlignment="Left">
+            <Button Content="Компьютеры" Click="Comp_Click" Height="38" Width="196" Background="LightPink" FontSize="16" FontFamily="Gill Sans Ultra Bold Condensed" Style="{DynamicResource MaterialDesignRaisedButton}"/>
+        </StackPanel>
+        <StackPanel Margin="28,234,0,111" HorizontalAlignment="Left">
+            <Button Content="События" Height="38" Width="196" Background="LightPink" FontSize="16" FontFamily="Gill Sans Ultra Bold Condensed" Style="{DynamicResource MaterialDesignRaisedButton}"/>
+        </StackPanel>
+        <StackPanel Margin="498,234,0,111" HorizontalAlignment="Left">
+            <Button Content="Отзывы" Height="38" Width="196" Background="LightPink" FontSize="16" FontFamily="Gill Sans Ultra Bold Condensed" Style="{DynamicResource MaterialDesignRaisedButton}"/>
+        </StackPanel>
+        <StackPanel Margin="498,170,0,175" HorizontalAlignment="Left">
+            <Button Content="Игры" Height="38" Width="196" Background="LightPink" FontSize="16" FontFamily="Gill Sans Ultra Bold Condensed" Style="{DynamicResource MaterialDesignRaisedButton}"/>
+        </StackPanel>
+        <StackPanel Margin="265,234,0,111" HorizontalAlignment="Left">
+            <Button Content="Платежи" Height="38" Width="196" Background="LightPink" FontSize="16" FontFamily="Gill Sans Ultra Bold Condensed" Style="{DynamicResource MaterialDesignRaisedButton}"/>
+        </StackPanel>
+        <StackPanel Margin="265,170,0,175" HorizontalAlignment="Left">
+            <Button Content="Акции" Height="38" Width="196" Background="LightPink" FontSize="16" FontFamily="Gill Sans Ultra Bold Condensed" Style="{DynamicResource MaterialDesignRaisedButton}"/>
+        </StackPanel>
+       
+        <StackPanel Margin="498,328,0,17" HorizontalAlignment="Left">
+            <Button Content="Выход" Height="38" Width="196" Background="LightPink" FontSize="16" FontFamily="Gill Sans Ultra Bold Condensed" Style="{DynamicResource MaterialDesignRaisedButton}"/>
+        </StackPanel>
+    </Grid>
+</Window>

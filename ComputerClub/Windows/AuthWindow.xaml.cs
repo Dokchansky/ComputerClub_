@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Remoting.Contexts;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -22,6 +23,34 @@ namespace ComputerClub.Windows
         public AuthWindow()
         {
             InitializeComponent();
+        }
+
+        private void Login_Click(object sender, RoutedEventArgs e)
+        {
+            string login = loginbox.Text;
+            string password = passwordbox.Password;
+
+            using (var context = new Context())
+            {
+                var user = context.Members.FirstOrDefault(l => l.login == login & l.password == password && l.Name != "Администратор");
+                var user2 = context.Members.FirstOrDefault(l => l.login == login & l.password == password && l.Name == "Администратор");
+
+                if (user != null)
+                {
+                    MessageBox.Show("Авторизация прошла успешно!");
+                    Hide();
+                    UserWindow userWindow = new UserWindow();
+                    userWindow.Show();
+                    
+                }
+                else if (user2 != null)
+                {
+                    MessageBox.Show("Вы администратор!");
+                }
+
+
+            }
+
         }
     }
 }

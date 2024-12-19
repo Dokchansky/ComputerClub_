@@ -5,8 +5,18 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ComputerClub.Windows"
         mc:Ignorable="d"
-        Title="AuthWindow" Height="450" Width="800">
+        Title="AuthWindow" Height="433" Width="311">
     <Grid>
-        <Button/>
+        <StackPanel Height="33" VerticalAlignment="Top"   RenderTransformOrigin="0.454,1.447" Margin="0,273,0,0">
+            <Button Content="Войти" Click="Login_Click" Height="32" FontSize="14" FontFamily="Gill Sans Ultra Bold Condensed" Background="LightPink" Width="131" Style="{DynamicResource MaterialDesignRaisedButton}" />
+        </StackPanel>
+        <StackPanel Height="61" VerticalAlignment="Top" Margin="54,87,54,0"  >
+            <Label Content="Логин" Height="33" Width="168"/>
+            <TextBox x:Name="loginbox" Height="25" Width="176"/>
+        </StackPanel>
+        <StackPanel Height="64" VerticalAlignment="Top" Margin="0,153,0,0" >
+            <Label Content="Пароль" Height="33" Width="168"/>
+            <PasswordBox x:Name="passwordbox" Height="25" Width="176"/>
+        </StackPanel>
     </Grid>
 </Window>
