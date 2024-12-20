@@ -5,8 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ComputerClub.Windows"
         mc:Ignorable="d"
-        Title="PromotionWindow" Height="450" Width="800">
+        Title="PromotionWindow" Height="450" Width="800" ResizeMode="NoResize"
+WindowStartupLocation="CenterScreen">
     <Grid>
+        <StackPanel Margin="577,345,0,0" HorizontalAlignment="Left">
+            <Button Content="Выход" Click="Exit_Click" Height="38" Width="196" Background="LightPink" FontSize="16" FontFamily="Gill Sans Ultra Bold Condensed" Style="{DynamicResource MaterialDesignRaisedButton}"/>
+        </StackPanel>
         <DataGrid Margin="10,27,27,106" x:Name="PromotionGrid" AutoGenerateColumns="False" CanUserResizeColumns="False" IsReadOnly="True">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Наименование" CanUserReorder="False" Binding="{Binding Title}"/>

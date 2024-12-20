@@ -32,10 +32,15 @@ namespace ComputerClub.Windows
                 var item = context.Feedbacks.ToList();
 
                 FeedbackGrid.ItemsSource = item;
-
             }
-
-            
+                        
+        }
+        private void Exit_Click(object sender, RoutedEventArgs e)
+        {
+            Hide();
+            UserWindow userWindow = new UserWindow();
+            Close();
+            userWindow.Show();
         }
 
     }

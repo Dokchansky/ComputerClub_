@@ -5,9 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ComputerClub.Windows"
         mc:Ignorable="d"
-        Title="FeedbackWindow" Height="450" Width="800">
+        Title="FeedbackWindow" Height="450" Width="800" ResizeMode="NoResize"
+WindowStartupLocation="CenterScreen">
     <Grid>
-        <DataGrid x:Name="FeedbackGrid" AutoGenerateColumns="False" CanUserResizeColumns="False" IsReadOnly="True" Margin="10,30,141,84">
+        <StackPanel Margin="538,373,0,-28" HorizontalAlignment="Left">
+            <Button Content="Выход" Click="Exit_Click" Height="38" Width="196" Background="LightPink" FontSize="16" FontFamily="Gill Sans Ultra Bold Condensed" Style="{DynamicResource MaterialDesignRaisedButton}"/>
+        </StackPanel>
+        <DataGrid x:Name="FeedbackGrid" AutoGenerateColumns="False" CanUserResizeColumns="False" IsReadOnly="True" Margin="10,30,66,84">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Комментарий" CanUserReorder="False" Binding="{Binding Comment}"/>
                 <DataGridTextColumn Header="Оценка" CanUserReorder="False" Binding="{Binding Rating}"/>

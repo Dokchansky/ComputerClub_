@@ -5,16 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ComputerClub"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800" ResizeMode="NoResize"
+WindowStartupLocation="CenterScreen">
     <Grid>
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Top" Height="170" Width="154" >
             <Image Source="image.jpeg" Height="200"/>
         </StackPanel>
         <StackPanel Margin="0,202,0,143" HorizontalAlignment="Center">
-            <Button Content="Авторизация" Height="38" Width="196" Background="LightPink" FontSize="16" FontFamily="Gill Sans Ultra Bold Condensed" Style="{DynamicResource MaterialDesignRaisedButton}"/>
+            <Button Content="Авторизация" Click="Login_Click" Height="38" Width="196" Background="LightPink" FontSize="16" FontFamily="Gill Sans Ultra Bold Condensed" Style="{DynamicResource MaterialDesignRaisedButton}"/>
         </StackPanel>
         <StackPanel HorizontalAlignment="Center" Margin="0,296,0,41">
-            <Button Content="Регистрация" Height="38" Width="196" Background="LightPink" FontSize="16" FontFamily="Gill Sans Ultra Bold Condensed" Style="{DynamicResource MaterialDesignRaisedButton}"/>
+            <Button Content="Регистрация" Click="Register_Click" Height="38" Width="196" Background="LightPink" FontSize="16" FontFamily="Gill Sans Ultra Bold Condensed" Style="{DynamicResource MaterialDesignRaisedButton}"/>
         </StackPanel>
     </Grid>
 </Window>

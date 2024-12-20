@@ -21,7 +21,7 @@ public class Context : DbContext
 
     protected override void OnModelCreating(DbModelBuilder modelBuilder)
     {
-        // Настройка отношений между сущностями
+       
         modelBuilder.Entity<Reservations>()
             .HasRequired(r => r.Members)
             .WithMany()
@@ -42,7 +42,7 @@ public class Context : DbContext
             .WithMany()
             .HasForeignKey(f => f.MemberID);
 
-        // Другие конфигурации, если необходимо
+        
 
         base.OnModelCreating(modelBuilder);
     }

@@ -15,19 +15,18 @@ using System.Windows.Shapes;
 namespace ComputerClub.Windows
 {
     /// <summary>
-    /// Логика взаимодействия для EventsWindow.xaml
+    /// Логика взаимодействия для EventAdminWindow.xaml
     /// </summary>
-    public partial class EventsWindow : Window
+    public partial class EventAdminWindow : Window
     {
-        public EventsWindow()
+        public EventAdminWindow()
         {
             InitializeComponent();
             LoadEvents();
         }
-
         public void LoadEvents()
         {
-            using(var context  = new Context())
+            using (var context = new Context())
             {
                 var items = context.Events.ToList();
                 EventsGrid.ItemsSource = items;
@@ -36,10 +35,9 @@ namespace ComputerClub.Windows
         private void Exit_Click(object sender, RoutedEventArgs e)
         {
             Hide();
-            UserWindow userWindow = new UserWindow();
+            AdminWindow adminWindow = new AdminWindow();
             Close();
-            userWindow.Show();
+            adminWindow.Show();
         }
-
     }
 }

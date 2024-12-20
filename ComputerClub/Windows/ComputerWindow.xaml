@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ComputerClub.Windows"
         mc:Ignorable="d"
-        Title="ComputerWindow" Height="450" Width="800">
+        Title="ComputerWindow" Height="450" Width="800" ResizeMode="NoResize"
+WindowStartupLocation="CenterScreen">
     <Grid>
         <DataGrid x:Name="CompGrid" AutoGenerateColumns="False" CanUserResizeColumns="False" IsReadOnly="True" Margin="10,30,66,134">
             <DataGrid.Columns>
@@ -15,5 +16,8 @@
                 <DataGridTextColumn Header="Хранилище" CanUserReorder="False" Binding="{Binding Storage}"/>
             </DataGrid.Columns>
         </DataGrid>
+        <StackPanel Margin="538,335,0,10" HorizontalAlignment="Left">
+            <Button Content="Выход" Click="Exit_Click" Height="38" Width="196" Background="LightPink" FontSize="16" FontFamily="Gill Sans Ultra Bold Condensed" Style="{DynamicResource MaterialDesignRaisedButton}"/>
+        </StackPanel>
     </Grid>
 </Window>

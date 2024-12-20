@@ -40,17 +40,36 @@ namespace ComputerClub.Windows
                     MessageBox.Show("Авторизация прошла успешно!");
                     Hide();
                     UserWindow userWindow = new UserWindow();
+                    Close();
                     userWindow.Show();
                     
                 }
                 else if (user2 != null)
                 {
                     MessageBox.Show("Вы администратор!");
+                    Hide();
+                    AdminWindow adminWindow = new AdminWindow();
+                    Close();
+                    adminWindow.Show();
+
+                }
+                else
+                {
+                    MessageBox.Show("Ошибка авторизации!");
+                    return;
                 }
 
 
             }
 
+        }
+
+        private void Exit_Click(object sender, RoutedEventArgs e)
+        {
+            Hide();
+            MainWindow mainWindow = new MainWindow();
+            Close();
+            mainWindow.Show();
         }
     }
 }

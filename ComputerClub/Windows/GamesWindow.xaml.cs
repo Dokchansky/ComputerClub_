@@ -33,6 +33,12 @@ namespace ComputerClub.Windows
                 GamesGrid.ItemsSource = items;
             }
         }
-
+        private void Exit_Click(object sender, RoutedEventArgs e)
+        {
+            Hide();
+            UserWindow userWindow = new UserWindow();
+            Close();
+            userWindow.Show();
+        }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ComputerClub.Windows;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,22 @@ namespace ComputerClub
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void Login_Click(object sender, RoutedEventArgs e)
+        {
+            Hide();
+            AuthWindow authWindow = new AuthWindow();
+            Close();
+            authWindow.Show();
+        }
+
+        private void Register_Click(object sender, RoutedEventArgs e)
+        {
+            Hide();
+            RegisterWindow registerWindow = new RegisterWindow();
+            Close();
+            registerWindow.Show();
         }
     }
 }
